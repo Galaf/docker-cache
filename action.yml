@@ -1,24 +1,31 @@
-name: The name of your action here
-description: Provide a description here
-author: Your name or organization here
+name: Docker Cache
+description: Cache Docker images whether built or pulled.
+author: Christophe Labonne
 
-# Add your action's branding here. This will appear on the GitHub Marketplace.
 branding:
   icon: heart
   color: red
 
-# Define your inputs here.
 inputs:
-  milliseconds:
-    description: Your input description here
+  key:
+    description: >
+      The cache key to ferry to the official GitHub cache action. restore-keys
+      are not supported, because partial cache restoration leads to a "snowball"
+      effect.
     required: true
-    default: '1000'
+  read-only:
+    description: If "true", disables saving the cache upon cache miss
+    required: false
+    default: 'false'
 
-# Define your outputs here.
 outputs:
-  time:
-    description: Your output description here
+  cache-hit:
+    description: >
+      The ferried output of the official GitHub cache action. True on cache hit
+      (even if the subsequent docker load failed) and false on cache miss.
 
 runs:
   using: node20
-  main: dist/index.js
+  main: dist/main/index.js
+  post-if: success()
+  post: dist/post/index.js
