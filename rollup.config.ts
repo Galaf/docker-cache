@@ -1,18 +1,32 @@
 // See: https://rollupjs.org/introduction/
 
+import { defineConfig } from 'rollup'
 import commonjs from '@rollup/plugin-commonjs'
 import nodeResolve from '@rollup/plugin-node-resolve'
 import typescript from '@rollup/plugin-typescript'
+import json from '@rollup/plugin-json'
 
-const config = {
-  input: 'src/main.ts',
+export default defineConfig({
+  input: {
+    main: 'src/main.ts',
+    post: 'src/post.ts'
+  },
   output: {
     esModule: true,
-    file: 'dist/main.js',
+    sourcemap: true,
+    dir: 'dist',
     format: 'es',
-    sourcemap: true
+    entryFileNames: '[name]/index.js' // Places compiled files in `dist/main/index.js` and `dist/post/index.js`
   },
-  plugins: [typescript(), nodeResolve({ preferBuiltins: true }), commonjs()]
-}
-
-export default config
+  plugins: [
+    typescript(),
+    nodeResolve({ preferBuiltins: true }),
+    json(),
+    commonjs()
+  ],
+  context: 'this',
+  onwarn(warning, warn) {
+    if (warning.code === 'CIRCULAR_DEPENDENCY') return // Suppress circular warnings
+    warn(warning)
+  }
+})

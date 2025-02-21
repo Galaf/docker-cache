@@ -1,0 +1,1 @@
+{"version":3,"file":"index.js","sources":["../../src/post.ts"],"sourcesContent":["import { saveDockerImages } from './docker.js'\n\nawait saveDockerImages()\n"],"names":[],"mappings":";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAEA,MAAM,gBAAgB,EAAE"}

@@ -4,7 +4,6 @@
   "version": "0.0.0",
   "author": "",
   "type": "module",
-  "private": true,
   "homepage": "https://github.com/actions/typescript-action",
   "repository": {
     "type": "git",
@@ -46,6 +45,7 @@
     "@github/local-action": "^2.2.1",
     "@jest/globals": "^29.7.0",
     "@rollup/plugin-commonjs": "^28.0.1",
+    "@rollup/plugin-json": "^6.1.0",
     "@rollup/plugin-node-resolve": "^16.0.0",
     "@rollup/plugin-typescript": "^12.1.1",
     "@types/jest": "^29.5.14",
