@@ -1,1 +1,1 @@
-{"version":3,"file":"index.js","sources":["../../src/main.ts"],"sourcesContent":["import { loadDockerImages } from './docker.js'\n\nawait loadDockerImages()\n"],"names":[],"mappings":";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAEA,MAAM,gBAAgB,EAAE"}
+{"version":3,"file":"index.js","sources":["../../src/main.ts"],"sourcesContent":["import { loadDockerImages } from './docker.js'\n\nawait loadDockerImages()\n"],"names":[],"mappings":";;AAEA,MAAM,gBAAgB,EAAE"}

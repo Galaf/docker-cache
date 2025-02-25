@@ -16,7 +16,8 @@ export default defineConfig({
     sourcemap: true,
     dir: 'dist',
     format: 'es',
-    entryFileNames: '[name]/index.js' // Places compiled files in `dist/main/index.js` and `dist/post/index.js`
+    entryFileNames: '[name]/index.js', // Places compiled files in `dist/main/index.js` and `dist/post/index.js`
+    preserveModules: true
   },
   plugins: [
     typescript(),
