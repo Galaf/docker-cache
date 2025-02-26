@@ -1,4 +1,4 @@
-var dist = {};
+var src = {exports: {}};
 
-export { dist as __exports };
+export { src as __module };
 //# sourceMappingURL=index12.js.map
