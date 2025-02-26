@@ -89,4 +89,3 @@ const saveDockerImages = async () => {
 };
 
 export { CACHE_HIT, DOCKER_IMAGES_LIST, DOCKER_IMAGES_PATH, loadDockerImages, saveDockerImages };
-//# sourceMappingURL=index.js.map

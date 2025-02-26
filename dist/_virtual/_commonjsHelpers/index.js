@@ -26,4 +26,3 @@ function getAugmentedNamespace(n) {
 }
 
 export { commonjsGlobal, getAugmentedNamespace };
-//# sourceMappingURL=index.js.map

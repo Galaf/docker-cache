@@ -13,7 +13,6 @@ export default defineConfig({
   },
   output: {
     esModule: true,
-    sourcemap: true,
     dir: 'dist',
     format: 'es',
     entryFileNames: '[name]/index.js', // Places compiled files in `dist/main/index.js` and `dist/post/index.js`

@@ -3,4 +3,3 @@ import { __require as requireCore } from '../../node_modules/@actions/core/lib/c
 var coreExports = requireCore();
 
 export { coreExports as c };
-//# sourceMappingURL=index.js.map

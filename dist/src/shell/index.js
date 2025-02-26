@@ -36,4 +36,3 @@ const execShellCommand = async (command, platform = process.platform) => {
 };
 
 export { execShellCommand };
-//# sourceMappingURL=index.js.map
